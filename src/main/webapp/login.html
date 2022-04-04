@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <!-- Setting up menu bar -->
+    <div id ="SideMenuBar" class="sidemenu">
+      <a href="javascript:void(0)" class="close" onclick="closeMenu()">&times;</a> 
+      <a href="index.html">Home</a>
+      <a href="trend.html">Latest Trends</a>
+      <a href="register.html">Register</a>
+      <a href="shop.html">Shop</a>
+      <a href="library.html">Library</a>
+      <a href="contact.html">Contact</a>
+    </div>
+      <!-- Open Menu on mouse hover -->
+      <span style = "font-size:50px; cursor:pointer" onmouseover="openMenu()">&#9776;</span>
+  
+      <!--Javascript to open and close side menu-->
+      <script>
+        function openMenu() {
+          document.getElementById("SideMenuBar").style.width = "300px";
+          document.getElementById("mainPage").style.marginLeft = "300px";
+        }
+        
+        function closeMenu() {
+          document.getElementById("SideMenuBar").style.width = "0";
+          document.getElementById("mainPage").style.marginLeft = "0";   
+        }
+        </script>
+<head>
+  <link rel="stylesheet" href="cssfiles/loginstylesheet.css">
+  <div class="header">
+    <h1>Enter your details below to login</h1>
+    
+  </div>
+
+</head>
+<body style="background-color: antiquewhite;">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="trend.html">What's Trending</a></li>
+      <li class="dd">
+        <a href="javascript:void(0)" class="dropbtn">Account</a>
+        <div class="dd-content">
+          <a href="login.html">Log In</a>
+          <a href="register.html">Register</a>
+          <a href="logout.html">Log Out</a>
+        </div>
+      </li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="library.html">Library</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+
+      <div class="logform">
+      <form action="/action_page.php">
+        <label for="uname">Username:</label><br>
+        <input type="text" id="uname" name="uname" autofocus><br>
+        <label for="pword">Password:</label><br>
+        <input type="password" id="pw" name="pw"><br><br>
+        <input type="submit" value="Log In">
+      </form>
+      </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

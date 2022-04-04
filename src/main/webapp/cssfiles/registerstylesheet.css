@@ -1,0 +1,116 @@
+/* style for side menu */
+.sidemenu {
+  height: 100%; /* menu is same height as page*/
+  width: 0; /* width starts at 0 and is changed to 300 with javascript method in index.html */
+  position: fixed; /* stays to left*/
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  background-color: antiquewhite; 
+  overflow-x: hidden; /* Keeps menu hidden until mouse event */
+  padding-top: 100px; 
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* menu links */
+.sidemenu a {
+  padding: 10px 10px 10px 30px;
+  font-style: italic;
+  font-family: fantasy;
+  font-size: 30px;
+  color: black;
+  display: block;
+  transition: 0.5s;
+}
+
+.sidemenu a:hover {
+  color: gold;
+}
+
+/* Positioning the close button too the right of the menu */
+.sidemenu .close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 30px;
+  margin-left: 50px;
+}
+
+#mainPage {
+  transition: margin-left 1s;
+  padding: 20px;
+}
+.header{
+    background-image: url("../images/background.jpg");
+    padding: 50px;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 25px;
+}
+.p1 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: antiquewhite;
+}
+
+ul {
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: antiquewhite;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a, .dropbtn {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover, .dd:hover .dropbtn {
+    background-color: rgb(211, 79, 79);
+  }
+  
+  
+  li.dd {
+    display: inline-block;
+  }
+  
+  .dd-content {
+    display: none;
+    position: absolute;
+    background-color: antiquewhite;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dd-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dd-content a:hover {background-color: rgb(211, 79, 79);}
+  
+  .dd:hover .dd-content {
+    display: block;
+  }
+  body{
+    background-image: url("../images/background.jpg");
+  }
+  .logform{
+      padding: 50px;
+      text-align: center;
+      font-size: x-large;
+      font-family: Arial, Helvetica, sans-serif;
+      color: antiquewhite;
+  }

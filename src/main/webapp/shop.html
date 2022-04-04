@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <!-- Setting up menu bar -->
+    <div id ="SideMenuBar" class="sidemenu">
+      <a href="javascript:void(0)" class="close" onclick="closeMenu()">&times;</a> 
+      <a href="index.html">Home</a>
+      <a href="trend.html">Latest Trends</a>
+      <a href="register.html">Register</a>
+      <a href="shop.html">Shop</a>
+      <a href="library.html">Library</a>
+      <a href="contact.html">Contact</a>
+    </div>
+      <!-- Open Menu on mouse hover -->
+      <span style = "font-size:50px; cursor:pointer" onmouseover="openMenu()">&#9776;</span>
+  
+      <!--Javascript to open and close side menu-->
+      <script>
+        function openMenu() {
+          document.getElementById("SideMenuBar").style.width = "300px";
+          document.getElementById("mainPage").style.marginLeft = "300px";
+        }
+        
+        function closeMenu() {
+          document.getElementById("SideMenuBar").style.width = "0";
+          document.getElementById("mainPage").style.marginLeft = "0";   
+        }
+        </script>
+    <head>
+        <link rel="stylesheet" href="cssfiles/shopstylesheet.css">
+        <div class="header">
+        <h1> Shop </h1>
+        </div>
+    </head>
+    <body style="background-color: antiquewhite;">
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="trend.html">What's Trending</a></li>
+          <li class="dd">
+            <a href="javascript:void(0)" class="dropbtn">Account</a>
+            <div class="dd-content">
+              <a href="login.html">Log In</a>
+              <a href="register.html">Register</a>
+              <a href="logout.html">Log Out</a>
+            </div>
+          </li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="library.html">Library</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+
+          <form>
+            <label for="search">Search:</label><br>
+            <input type="text" id="uname" name="uname" autofocus><br>
+            <input type="submit" value="Search">
+          </form>
+          
+          <h2>Popular</h2>
+          <table>
+            <tr>
+              <th>Genre</th>
+              <th>Song</th>
+              <th>Artist</th>
+              <th>Add to Library</th>
+            </tr>
+            <tr>
+              <td>Pop</td>
+              <td>Beg you</td>
+              <td>Charli XCX</td>
+              <td><button id="button1" type="button" >Add to Library</button>
+                <script>
+                  document.getElementById("button1").addEventListener("click", function() {
+                  alert("Sorry, Library under Construction!");
+                  },true);
+                </script></td>
+            </tr>
+            <tr>
+              <td>Hip Hop</td>
+              <td>Shadowboxin'</td>
+              <td>Gza</td>
+              <td><button id="button2" type="button" >Add to Library</button>
+                <script>
+                  document.getElementById("button2").addEventListener("click", function() {
+                  alert("Sorry, Library under Construction!");
+                  },true);
+                </script></td>
+            </tr>
+            <tr>
+              <td>Rock</td>
+              <td>Man in Box</td>
+              <td>Alice in Chains</td>
+              <td><button id="button3" type="button" >Add to Library</button>
+                <script>
+                  document.getElementById("button3").addEventListener("click", function() {
+                  alert("Sorry, Library under Construction!");
+                  },true);
+                </script></td>
+            </tr>
+            <tr>
+              <td>Techno</td>
+              <td>Bring</td>
+              <td>Randomer</td>
+              <td><button id="button4" type="button" >Add to Library</button>
+                <script>
+                  document.getElementById("button4").addEventListener("click", function() {
+                  alert("Sorry, Library under Construction!");
+                  },true);
+                </script></td>
+            </tr>
+            <tr>
+              <td>Rock and Roll</td>
+              <td>Starman</td>
+              <td>David Bowie</td>
+              <td><button id="button5" type="button" >Add to Library</button>
+                <script>
+                  document.getElementById("button5").addEventListener("click", function() {
+                  alert("Sorry, Library under Construction!");
+                  },true);
+                </script></td>
+            </tr>
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <!-- Setting up menu bar -->
+    <div id ="SideMenuBar" class="sidemenu">
+      <a href="javascript:void(0)" class="close" onclick="closeMenu()">&times;</a> 
+      <a href="index.html">Home</a>
+      <a href="trend.html">Latest Trends</a>
+      <a href="register.html">Register</a>
+      <a href="shop.html">Shop</a>
+      <a href="library.html">Library</a>
+      <a href="contact.html">Contact</a>
+    </div>
+      <!-- Open Menu on mouse hover -->
+      <span style = "font-size:50px; cursor:pointer" onmouseover="openMenu()">&#9776;</span>
+  
+      <!--Javascript to open and close side menu-->
+      <script>
+        function openMenu() {
+          document.getElementById("SideMenuBar").style.width = "300px";
+          document.getElementById("mainPage").style.marginLeft = "300px";
+        }
+        
+        function closeMenu() {
+          document.getElementById("SideMenuBar").style.width = "0";
+          document.getElementById("mainPage").style.marginLeft = "0";   
+        }
+        </script>
+    <head>
+        <link rel="stylesheet" href="cssfiles/contactstylesheet.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <div class="header">
+        <h1> Contact Us </h1>
+        <p class ="p1">If you need to get in touch us please see our details below</p>
+        </div>
+    </head>
+    <body style="background-color: antiquewhite;">
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="trend.html">What's Trending</a></li>
+          <li class="dd">
+            <a href="javascript:void(0)" class="dropbtn">Account</a>
+            <div class="dd-content">
+              <a href="login.html">Log In</a>
+              <a href="register.html">Register</a>
+              <a href="logout.html">Log Out</a>
+            </div>
+          </li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="library.html">Library</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+
+          <div class="details">
+            <p><a href="sean.hudson4@mail.dcu.ie">Contact us by Email</a><i class="material-icons" >mail</i></p>
+            <p2>Contact us by phone: 01-123456 <i class="material-icons">phone</i><br></p2>
+            <p3><br>We are located at:<i class="material-icons">home</i><br>O'Connell Street<br> Dublin 1<br> Ireland<br><br></p3>
+            <p4>Want us to reach out to you? No Problem! Fill in the details below.</p4>
+          </div>
+
+          <script>
+            function validateName(){
+              let name = document.forms["contactForm"]["name"].value;
+              if (name == "" || name == " "){
+                alert("This is not a valid name");
+                return false;
+              }
+            }
+
+             //validate that an email is entered
+             const email = document.getElementById("email");
+            email.addEventListener("input", function (event){
+              if (email.validity.typeMismatch){
+                return false;
+              }
+            });
+
+            //Validate age is a number
+            function isNumber(){
+              let phone = document.getElementById("phone").value;
+              //if it is not a number, return invalid
+              let text;
+              if (Nan(phone) || phone != 10){
+                text = "Invalid Input, please enter a phone Number, a phone number should have 10 digits."
+              }else{
+                text = "Number registered"
+              }
+            }
+            //save input data locally
+            function saveInput(){
+              var inputName= document.getElementById("name");
+              localStorage.setItem("name", inputName.value);
+              var inputSname= document.getElementById("sname");
+              localStorage.setItem("sname", inputSname.value);
+              var emailIn= document.getElementById("email");
+              localStorage.setItem("email", emailIn.value);
+              var inputNumber= document.getElementById("phone");
+              localStorage.setItem("phone", inputNumber.value);
+              var inputAddress= document.getElementById("address");
+              localStorage.setItem("address", inputAddress.value);
+             
+            }
+            //return saved data
+            function returnData(){
+              var storedFname = localStorage.getItem("name");
+              var storedSname = localStorage.getItem("sname");
+              var storedEmail = localStorage.getItem("email");
+              var storedPhone = localStorage.getItem("phone");
+              var storedAddress = localStorage.getItem("address");
+
+              document.write(storedFnam, storedSname, storedEmail, storedPhone, storedAddress);
+
+              
+            }
+
+          </script>
+
+
+          <div class="logform">
+          <form name ="contactForm" action="InsertDBForm" onsubmit="return validateName(), isNumber()" method="post">
+            <label for="name">First Name:</label><br>
+            <input type="text" id="name" name="name" autofocus><br>
+            <label for="sname">Surname:</label><br>
+            <input type="text" id="sname" name="sname" autofocus><br>
+            <label for="email">Phone Number:</label><br>
+            <input type="email" id="phone" name="phone" autofocus><br>
+            <label for="phone">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <label for="address">County:</label><br>
+            <input type="text" id="County" name="address"><br><br>
+            <input type="submit" value="Submit">
+            <button onclick="saveInput(), validateUser(), passwordValid(), isNumber()" type="button">Save Data</button>
+            <button onclick="returnData()" type="button">Return Data</button>
+          </form>
+        </div>
+
+          
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

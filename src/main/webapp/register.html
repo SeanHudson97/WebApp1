@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <!-- Setting up menu bar -->
+    <div id ="SideMenuBar" class="sidemenu">
+      <a href="javascript:void(0)" class="close" onclick="closeMenu()">&times;</a> 
+      <a href="index.html">Home</a>
+      <a href="trend.html">Latest Trends</a>
+      <a href="register.html">Register</a>
+      <a href="shop.html">Shop</a>
+      <a href="library.html">Library</a>
+      <a href="contact.html">Contact</a>
+    </div>
+      <!-- Open Menu on mouse hover -->
+      <span style = "font-size:50px; cursor:pointer" onmouseover="openMenu()">&#9776;</span>
+  
+      <!--Javascript to open and close side menu-->
+      <script>
+        function openMenu() {
+          document.getElementById("SideMenuBar").style.width = "300px";
+          document.getElementById("mainPage").style.marginLeft = "300px";
+        }
+        
+        function closeMenu() {
+          document.getElementById("SideMenuBar").style.width = "0";
+          document.getElementById("mainPage").style.marginLeft = "0";   
+        }
+        </script>
+    <head>
+        <link rel="stylesheet" href="cssfiles/registerstylesheet.css">
+        <div class="header">
+        <h1> Register Below! </h1>
+        <p class ="p1">New to the site? Get started now!</p>
+        </div>
+    </head>
+    <body style="background-color: antiquewhite;">
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="trend.html">What's Trending</a></li>
+          <li class="dd">
+            <a href="javascript:void(0)" class="dropbtn">Account</a>
+            <div class="dd-content">
+              <a href="login.html">Log In</a>
+              <a href="register.html">Register</a>
+              <a href="logout.html">Log Out</a>
+            </div>
+          </li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="library.html">Library</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+          <script>
+            //Validate the username
+            function validateUser(){
+              let uname = document.forms["registerForm"]["uname"].value;
+              if (uname == "" || uname == " "){
+                alert("Username not valid, please enter a correct Username");
+                return false;
+              }
+            }
+
+            //validate that an email is entered
+            const email = document.getElementById("email");
+            email.addEventListener("input", function (event){
+              if (email.validity.typeMismatch){
+                return false;
+              }
+            },true);
+
+            //Validate passwords match
+            function passwordValid(){
+              var pword1 = document.getElementById("pword1");
+              var pword2 = document.getElementById("pword2");
+              if (pword1 != pword2){
+                alert("Passwords do not match!")
+                return false;
+              }else{
+                alert("Password created.")
+                return true;
+            }
+          }
+            //Validate age is a number
+            function isNumber(){
+              let age = document.getElementById("age").value;
+              //if it is not a number, return invalid
+              let text;
+              if (Nan(age)){
+                text = "Invalid Input, please enter a Number"
+              }else{
+                text = "Age registered"
+              }
+            }
+            //writing a function to change username to uppercase if not entered in uppercase.
+            function toUppercase(){
+              const nameIn = document.getElementById("uname");
+              nameIn.value = nameIn.value.toUpperCase();
+            }
+
+          </script>
+          <!--Import JQuery API from Google-->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+          
+
+          <div class="logform">
+            <form name ="registerForm" action="registerAction.php" onsubmit="validateUser(), passwordValid(), isNumber()" method="post">
+              <label for="uname">Username:</label><br>
+              <input type="text" id="uname" name="uname" onchange="toUppercase()"><br>
+              <label for="age">Age:</label><br>
+              <input type="text" id="age" name="age" autofocus><br>
+              <label for="email">Email:</label><br>
+              <input type="email" id="email" name="email" autofocus><br><br>
+              <label for="pword1">Password:</label><br>
+              <input type=password name="pword1" ><br>
+              <label for="pword2">Confirm Password:</label><br>
+              <input type=password name="pword2" ><br><br>
+              <input type="submit" value="Register" >
+            </form>
+            </div>
+
+         
+
+          
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
